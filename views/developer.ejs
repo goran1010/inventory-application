@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= developerName %></title>
+  </head>
+  <body>
+    <% if (developerDetails.length === 0) { %>
+    <div>Sorry this developer has no games in our collection.</div>
+    <% } else {%> <% developerDetails.map(developer =>{ %>
+    <div>
+      <%= developer.developer_name %> from <%= developer.based_in %> has <%=
+      developer.employees %> employees and has made <%= developer.game_name %>
+    </div>
+    <% }) }%>
+  </body>
+</html>

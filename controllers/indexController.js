@@ -1,7 +1,7 @@
 import getAllDevelopers from "../models/getAllDevelopers.js";
 
-function indexController(req, res) {
-  const allDevelopers = getAllDevelopers();
+async function indexController(req, res) {
+  const allDevelopers = await getAllDevelopers();
   res.render("index", { allDevelopers });
 }
 
