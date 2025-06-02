@@ -1,23 +1,24 @@
 {
-  "name": "express-template",
+  "name": "inventory-application",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goran1010/express-template.git"
+    "url": "git+https://github.com/goran1010/inventory-application.git"
   },
   "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goran1010/express-template/issues"
+    "url": "https://github.com/goran1010/inventory-application/issues"
   },
-  "homepage": "https://github.com/goran1010/express-template#readme",
+  "homepage": "https://github.com/goran1010/inventory-application#readme",
   "dependencies": {
     "dotenv": "^16.5.0",
     "ejs": "^3.1.10",

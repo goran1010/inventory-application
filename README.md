@@ -1,3 +1,3 @@
-# express-template
+# Inventory Application
 
-This is a template for Node.js, express, postgreSQL projects.
+This is an inventory application made using Express and PostgreSQL.
