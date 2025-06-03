@@ -6,12 +6,30 @@
     <title><%= developerName %></title>
   </head>
   <body>
+    <form action="/<%= developerName %>/modify" method="post">
+      <div>
+        <label for="name">Change developer name: </label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <label for="based_in">Change where developer is from: </label>
+        <input type="text" id="based_in" name="based_in" />
+      </div>
+      <div>
+        <label for="employees">Change number of employees: </label>
+        <input type="text" id="employees" name="employees" />
+      </div>
+      <button type="submit">Confirm changes</button>
+    </form>
     <% if (developerDetails.length === 0) { %>
     <div>Sorry this developer has no games in our collection.</div>
     <% } else {%> <% developerDetails.map(developer =>{ %>
     <div>
       <%= developer.developer_name %> from <%= developer.based_in %> has <%=
       developer.employees %> employees and has made <%= developer.game_name %>
+      <a href="/<%= developer.developer_name %>/<%= developer.game_name %>"
+        >View game</a
+      >
     </div>
     <% }) }%>
   </body>

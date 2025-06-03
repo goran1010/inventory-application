@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= gameName %></title>
+  </head>
+  <body>
+    <% if (gameDetails.length === 0) { %>
+    <div>Sorry no game in our collection.</div>
+    <% } else {%> <% gameDetails.map(game =>{ %>
+    <div><%= game.developer_name %> has made <%= game.game_name %></div>
+    <% }) }%>
+  </body>
+</html>

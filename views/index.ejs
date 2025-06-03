@@ -10,7 +10,34 @@
     <div>
       <%= developer.name %> from <%= developer.based_in %>
       <a href="/<%= developer.name %>">View <%= developer.name %> games</a>
+      <form action="/delete/<%= developer.name %>" method="POST">
+        <label for="password-<%= developer.name %>">Admin password: </label
+        ><input
+          type="password"
+          id="password-<%= developer.name%>"
+          name="password"
+        />
+        <input type="hidden" value="<%= developer.name %>" name="developer" />
+        <button type="submit">Delete developer</button>
+      </form>
     </div>
     <% }) %>
+
+    <form action="/new-developer" method="POST">
+      <legend>Create a new developer to add to our store !</legend>
+      <div>
+        <label for="name">Developer name: </label
+        ><input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label for="based_in">Developer is from: </label
+        ><input type="text" id="based_in" name="based_in" required />
+      </div>
+      <div>
+        <label for="employees">Number of employees: </label
+        ><input type="text" id="employees" name="employees" />
+      </div>
+      <button type="submit">Create the developer</button>
+    </form>
   </body>
 </html>
