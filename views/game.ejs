@@ -6,6 +6,28 @@
     <title><%= gameName %></title>
   </head>
   <body>
+    <form
+      action="/game-modify/<%= gameDetails[0].developer_name %>/<%= gameName %>"
+      method="post"
+    >
+      <div>
+        <label for="name">Change game name: </label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <label for="genre">Change genre: </label>
+        <input type="text" id="genre" name="genre" />
+      </div>
+      <div>
+        <label for="price">Change price in dollars: </label>
+        <input type="number" id="price" name="price" />
+      </div>
+      <div>
+        <label for="developer_id">Change developer ID: </label>
+        <input type="number" id="developer_id" name="developer_id" />
+      </div>
+      <button type="submit">Confirm changes</button>
+    </form>
     <% if (gameDetails.length === 0) { %>
     <div>Sorry no game in our collection.</div>
     <% } else {%> <% gameDetails.map(game =>{ %>

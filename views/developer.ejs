@@ -31,6 +31,38 @@
         >View game</a
       >
     </div>
+    <form action="/delete-game/<%= developer.game_name %>" method="POST">
+      <label for="password2<%= developer.game_name %>">Admin password: </label
+      ><input
+        type="password"
+        id="password2-<%= developer.name%>"
+        name="password"
+        required
+      />
+      <input type="hidden" value="<%= developer.game_name %>" name="game" />
+      <button type="submit">Delete game</button>
+    </form>
     <% }) }%>
+
+    <form action="/new-game" method="POST">
+      <legend>Create a new game for <%= developerName %>!</legend>
+      <div>
+        <label for="name">Game name: </label
+        ><input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label for="genre">Genre: </label
+        ><input type="text" id="genre" name="genre" required />
+      </div>
+      <div>
+        <label for="price">Price in dollars: </label
+        ><input type="number" id="price" name="price" />
+      </div>
+      <div>
+        <label for="developer_id">Developer ID: </label
+        ><input type="number" id="developer_id" name="developer_id" />
+      </div>
+      <button type="submit">Create the developer</button>
+    </form>
   </body>
 </html>
