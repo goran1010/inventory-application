@@ -8,5 +8,5 @@ const DATABASE_PASSWORD = process.env.DATABASE_PASSWORD;
 const DATABASE_NAME = process.env.DATABASE_NAME;
 
 export default new Pool({
-  connectionString: `postgresql://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}/${DATABASE_NAME}?sslmode=require`,
+  connectionString: `postgresql://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}/${DATABASE_NAME}`,
 });
